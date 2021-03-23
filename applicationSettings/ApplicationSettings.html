@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Settings</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="../utils/global.css">
+    <link rel="stylesheet" href="applicationSettings.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"
+        integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ=="
+        crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+
+</head>
+
+
+<body>
+    <main>
+        <header class="header-outline"></header>
+        <div class="container">
+
+            <nav class="menu"></nav>
+
+
+            <!-- navigation bar  on the left-->
+
+
+
+            <div class="user .flex-item-left">
+                <img src="../assets/load.gif" class="load-gif" alt="loading..">
+                <div class="user-list">
+
+                </div>
+            </div>
+            <div class='error-msg'>
+
+            </div>
+            <!-- Section: Details -->
+            <div class="details .flex-item-right">
+                <div class="main-head">
+                    <button aria-label="assign-unit-button" class="assign-unit">Save</button>
+
+                </div>
+                <form action="" class="form" method='POST'>
+                    <div class="name"> Name
+                        <span class="red-star">*</span>
+                    </div>
+                    <div><label for="name-box" class="hide">Name</label>
+                        <input type="text" id='name-box' name='textname'>
+                    </div>
+                    <div class="name"> Short Name</div>
+                    <div><label for="shortName-box" class="hide">SearchBox</label>
+                        <input type="text" id='shortName-box'>
+                    </div>
+                    <div class="name"> Icon</div>
+                    <div>
+                        <label for="icon-box">
+                            <select id="icon-box" class="icon-lists">
+                                <option value="chassis">Chassis</option>
+                                <option value="laptop">Laptop</option>
+                                <option value="memory">Memory</option>
+                            </select>
+                        </label>
+                    </div>
+
+                    <div class="name1">Properties</div>
+                    <div class="asset-allocation" id="table1">
+                        <div>
+                            <span class="type">Label</span>
+                            <span class="serial">Default</span>
+                            <span class="asset-name">Name</span>
+                            <span class="from-date">Required</span>
+                        </div>
+                        <div class="property-container">
+
+                        </div>
+                    </div>
+                    <button class="add" id="property-btn" type="button">Add Property</button>
+                    <div class="name1">Parts</div>
+                    <div class="asset-allocation" id="table2">
+                        <div>
+                            <span class="type">Part Name</span>
+                            <span class="serial"></span>
+                            <span class="asset-name">Name</span>
+                            <span class="from-date">Default</span>
+                        </div>
+                        <div class="part-container">
+
+                        </div>
+                    </div>
+                    <button class="add" id="part-btn" type="button">Add Part</button>
+
+
+                    <div class="name"> Comments: </div>
+
+                    <div>
+                        <label for="comments" class="hide">Comments</label>
+                        <textarea id="comments" name="comments" rows="6" cols="50">
+
+                             </textarea>
+
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="applicationSettings.js" type="module"></script>
+</body>
+
+</html>

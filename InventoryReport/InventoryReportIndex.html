@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Management</title>
+
+    <link rel="stylesheet" href="inventoryReport.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <link rel="stylesheet" href="../utils/global.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+
+</head>
+
+<body>
+
+
+    <div class="wrapper">
+
+        <header class="header-outline"></header>
+
+        <div class="container">
+
+            <nav class="menu"></nav>
+
+
+
+            <main>
+                <div class="reportGenerated">
+                    <div class="reportHeader">
+                        <div>
+                            <b>Statistics</b>
+                        </div>
+                        <div class="selected">
+                            <b>Units by state</b>
+                        </div>
+
+                        <div>
+                            <b>Integrity</b>
+                        </div>
+
+                        <div>
+                            <b>Top users</b>
+                        </div>
+                    </div>
+                    <div class="searchReport">
+                        <div class="unitCounter">
+                            <span>All Units :</span>
+                        </div>
+                        <div class="dateWrapper">
+                            <div class="leftSearch">
+                                <div class="dateRange">
+                                    <label for="from-date">From date:</label>
+                                    <input type="date" id="from-date" aria-label="from-date"  name="from-date" class="date-picking" value="2020-01-01">
+                                </div>
+
+                                <div class="dateRange">
+                                    <label for="to-date">To date:</label>
+                                    <input type="date" id="to-date" aria-label="to-date" name="from-date" class="date-picking" value="2021-01-01">
+                                </div>
+
+
+                              
+                            </div>
+                            <div class="rightSearch">
+                                <div class="allDropdown">
+                                    <select class="statusSelect" id="status-dropdown" aria-label="Select availablity type">
+                                        <option value="Added">Added</option>
+                                        <option value="Available" class="Available">Available</option>
+                                        <option value="Allotted" class="Allotted">Allotted</option>
+                                    </select>
+
+                                    <select class="resourceType" name="type" id="resource-type-id" aria-label="Select hardware type">
+                                        <option value="All Units" selected>All Units</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="horizontalBar">
+                        <div>Status</div>
+                        <div>Serial</div>
+                        <div>Type</div>
+                        <div>Name</div>
+                        <div>Assigned to</div>
+                        <div>From</div>
+                    </div>
+                    <div class="error-msg">
+
+                    </div>
+                    <div class="entryForTable">
+                    </div>
+                </div>
+            </main>
+            <div class="load-gif">
+                <img src="../assets/load.gif" alt="loading..">
+            </div>
+            <script type="module" src="reports.js"></script>
+            </div>
+    </div>
+</body>
+
+</html>

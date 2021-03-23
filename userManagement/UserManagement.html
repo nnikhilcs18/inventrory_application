@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="User Management Module for User Details">
+    <meta name="keywords" content="User Details,Maintance, Usage History">
+    <title>User Management</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="../utils/global.css">
+    <link rel="stylesheet" href="userManagement.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"
+        integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+    
+
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header-outline">
+            
+        </header>
+
+        <div class="container">
+
+            <nav class="menu">
+                
+            </nav>
+
+            <section class="users-details">
+
+                <div class="users-header">
+                
+                    <h2 class="users-header-items">User Details</h2>
+                    <div class="users-header-bar display-none">
+                        <label for="searchName" class="display-none">Search</label>
+                        <input type="text" name="searchName" id="searchName" class="search-bar" placeholder="Search Users">
+                    </div>
+
+
+                    <div class="users-header-items">
+                        <button aria-label="Search users" class="search-btn"><i class="fas fa-search"></i></button>
+                        <button aria-label="Refresh-Sync users group" class="sync-btn"><i class="fas fa-sync-alt"></i></button>
+                    </div>
+                    <div class="users-header-bar display-none">
+                        <button aria-label="Search by typing for users" class="close-search"> <i class="fas fa-times"></i> </button>
+                    </div>
+
+                </div>
+                
+
+
+                <div class="main-image">
+                    <img src="../assets/load.gif" alt="Image or Gif that gives Information about Loading">
+                </div>
+
+                <div class="error-display">
+
+                </div>
+
+                <div class="users-not-found display-none">
+                    <b> Users Not Found !</b>
+                </div>
+
+                <div class="users-contacts">
+
+                </div>
+            </section>
+
+            <section class="main">
+                <div class="main-header">
+                    <button aria-label="back button for mobile viewport"><i class="fas fa-long-arrow-alt-left left-arrow display-none"></i></button> 
+                    <h3 class="main-header-margin">Data to appear</h3>
+                </div>
+
+                <div class="main-container">
+                    <div class="main-selected">
+                        <div>
+                            <span class="user-contact"> Email </span>
+                            <a href="https://google.com"><span class="user-contact-id">   </span></a>
+                        </div>
+                        <div>
+                            <span class="user-contact"> Skype </span>
+                            <a href="https://skype.com"> <span class="user-contact-id"> </span> </a>
+                        </div>
+                    </div>
+
+                    <div class="main-data">
+                        <div class="row-header">
+
+                            <div class="type-header"> Type </div>
+                            <div> Serial </div>
+                            <div> Name </div>
+                            <div> From </div>
+                        </div>
+                        <div class="main-data-after-header">
+                        
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <div class="right-section">
+        <div class="popup-header">
+    
+        </div>
+        <div class="right-section-body">
+            <div class="right-section-text">  <div class="text-first-line">Select a Unit</div> <div class="or-word"> or </div> <div>Click "Assign Unit"</div> <div class="last-line-text">to add a new one.</div> </div>
+        </div>
+    </div>
+
+    <div class="right-popup display-none">
+        <form action="functionHandler.php" method="POST">
+            <div class="popup-header">
+                <div class="popup-header-left">
+                    <button class="close-icon-right-popup" aria-label="Close Icon"><i class="fas fa-times"></i></button>
+                    <span>Monitor MON-00048</span>
+                </div>
+                <div class="edit">
+                    <button aria-label="Edit status assignedto details"><i class="fas fa-pen"></i></button>
+                </div>
+            </div>
+            <div class="popup-body">
+                <div class="log-info">
+                    <div>
+
+                        <b> <label for="select-status-of-order">Status :</label> </b>
+                        <select class="add-device-list" id="select-status-of-order">
+                            <option>Taken</option>
+                            <option>OutofOrder</option>
+                            <option>Deprecated</option>
+                        </select>
+                    </div>
+                    <div>
+
+                        <b> <label for="select-assignedto"> Assigned to :</label> </b>
+                        <select class="add-device-list" id="select-assignedto">
+                            <option class="option-assignedto">Araceli Church</option>
+                            <option>Bailey Cook</option>
+                            <option>Bailey Dorsey</option>
+                        </select>
+                    </div>
+                    <div>
+                        <b> Model: </b>
+                        <span>LG</span>
+                    </div>
+                    <div>
+                        <b> Size,inch: </b>
+                        <span>32</span>
+                    </div>
+                </div>
+                <div class="logs">
+                    <b>Logs</b>
+                    <div class="logs-status">
+                        <span class="logs-status-end-date">Taken</span> <i class="far fa-circle"></i> <span>8 Jan 20
+                            <span class="logs-status-name">by Araceli Church</span></span>
+                        <span></span> <i class="fas fa-grip-lines-vertical"></i> <span></span>
+                        <span class="logs-status-start-date">Available</span> <i class="far fa-circle"></i> <span>8 Jan
+                            20</span>
+                    </div>
+
+                    <a href="showDetailedLogs.html" class="showLogs">Show detailed logs</a>
+                    <div class="detailedLogs display-none">
+                        <p>
+                            18 February 2021 Fixture HDD-00033 status changed to Assigned by Owner
+                        </p>
+                        <p>
+                            18 February 2021 Fixture HDD-00033 status changed to Assigned by Owner
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+    <div class="form-popup display-none">
+        <form action="functionHandler2.php" method="POST" id="editForm">
+            <div class="popup-header-form">
+                <div class="popup-header-left-form">
+                    <button aria-label="Close Icon" class="close-form"><i class="fas fa-times"></i></button>
+                    <span>Monitor MON-00048</span>
+                </div>
+                <div class="popup-header-right-form">
+                    <button class="close-form">Cancel</button>
+                </div>
+            </div>
+            <div class="popup-body-form">
+                <div>
+                    <b> <label for="txtSerial">Serial :</label> </b>
+                    <input type="text" name="Serial" id="txtSerial" class="input-form">
+                </div>
+                <div>
+                    <b> <label for="txtName">Name :</label> </b>
+                    <input type="text" name="Name" id="txtName" class="input-form">
+                </div>
+                <div>
+                    <b> <label for="txtFrom">From :</label> </b>
+                    <input type="text" name="From" id="txtFrom" class="input-form">
+                </div>
+
+            </div>
+
+            <div class="popup-right-form-btn">
+                <button class="formSubmit">Save</button>
+            </div>
+        </form>
+    </div>
+
+
+    <script src="userManagement.js" type="module"></script>
+</body>
+
+</html>

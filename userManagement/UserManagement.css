@@ -1,0 +1,488 @@
+.right-popup {
+    flex: 1;
+    font-family: Arial, Helvetica, sans-serif;
+    z-index: 5;
+}
+
+.nav-btn {
+    background-color: #fff;
+}
+
+.users-details {
+    flex: 1;
+}
+
+.main {
+    flex: 3;
+}
+
+.users-header {
+    height: 35px;
+    background-color: #ebedf0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #808080;
+    padding: 0px 10px;
+    font-size: 10px;
+}
+
+.users-header button {
+    border: none;
+    cursor: pointer;
+    margin: 0px 5px;
+}
+
+.users-header i {
+    color: #808080;
+}
+
+.users-contacts {
+    background-color: #ebedf0;
+    /* new added below */
+    height: 95vh;
+    overflow-y: scroll;
+}
+
+.users-gmail {
+    height: 52px;
+    padding-top: 9px;
+    align-items: center;
+    padding-left: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    border-bottom: 1px solid #808080;
+    border-right: 1px solid #808080;
+}
+
+.name {
+    color: #000000;
+    margin-bottom: 5px;
+}
+
+.gmail-id {
+    color: #485467;
+}
+
+.users-gmail-hovered{
+    background-color: #fff;
+    border-left: 2px solid #1C80A3;
+}
+
+.users-gmail:hover {
+    background-color: #fff;
+    border-left: 2px solid #1C80A3;
+    cursor: pointer;
+}
+
+.user-details {
+    background-color: #2c2e35;
+    cursor: pointer;
+}
+
+.user-details i,.user-details a{
+    color: #00B4B4;
+}
+
+.main-header {
+    border-top: 1px solid #aaaaaa;
+    border-bottom: 1px solid #aaaaaa;
+    height: 35px;
+    padding: 6px 20px;
+}
+
+.main-header-margin{
+    margin: 0px 0px;
+    display: inline-block;
+}
+
+.main-container {
+    margin: 15px;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-selected div {
+    margin: 5px 0px;
+}
+
+.main-data {
+    margin-top: 15px;
+    border: 1px solid #aaaaaa;
+}
+
+.user-contact {
+    color:#797676;
+}
+
+.user-contact-id {
+    color: #1C80A3;
+    margin-left: 10px;
+}
+
+.main-selected a{
+    text-decoration: none;
+}
+
+.row-header {
+    min-height: 30px;
+    border-bottom: 1.5px solid #8bb6c4;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1.2fr 1fr 2fr 1fr;
+    font-weight: 700;
+    background-color: #e2e2e2;
+}
+
+.row-hovered {
+    background-color: rgb(241, 241, 241);
+    border-left: 2px solid #1C80A3;
+    cursor: pointer;
+}
+
+.row:hover {
+    background-color: rgb(241, 241, 241);
+    border-left: 2px solid #1C80A3;
+    cursor: pointer;
+}
+
+.type-header {
+    margin-left: 7px;
+}
+
+.row {
+    min-height: 25px;
+    border-bottom: 1px solid #aaaaaa;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 0.2fr 1fr 1fr 2fr 1fr;
+    color: #383737;
+}
+
+.row>div:nth-of-type(1) {
+    text-align: center;
+}
+
+.assign-btn {
+    height: 25px;
+    width: 150px;
+    margin-top: 20px;
+    color: #fff;
+    background-color: #1C80A3;
+    border: none;
+    cursor: pointer;
+}
+
+.popup-header {
+    height: 45px;
+    background-color: #fff;
+}
+
+.popup-body {
+    padding-top: 20px;
+    padding-left: 15px;
+    font-size: 11px;
+}
+
+.log-info select {
+    border: none;
+    color: #2ca8ca;
+    font-size: 11px;
+    background-color: #fff;
+}
+
+.log-info>div:nth-of-type(n) {
+    margin-top: 10px;
+}
+
+.logs {
+    margin-top: 30px;
+}
+
+.logs-status {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 3fr;
+    margin-top: 15px;
+}
+
+.logs-status span:nth-of-type(2n+1) {
+    text-align: center;
+}
+
+.logs-status i:nth-of-type(2) {
+    margin-left: 3px;
+}
+
+.logs-status i {
+    color: #1C80A3;
+}
+
+.logs-status i:nth-of-type(3) {
+    color: rgb(0, 214, 0);
+}
+
+.logs-status-start-date {
+    color: rgb(0, 196, 0);
+}
+
+.logs-status-end-date {
+    color: #1C80A3;
+}
+
+.logs-status-name {
+    color: #808080;
+}
+
+.logs a {
+    margin-top: 25px;
+    display: inline-block;
+    color: #2ca8ca;
+    text-decoration: none;
+    border-bottom: 2px dashed #2ca8ca;
+}
+
+/* --------------- JS --------------*/
+
+.form-popup{
+    /* display: flex; See how this effects the alignment */
+    /* flex-flow: row nowrap; */
+    flex: 1;
+    background-color: white;
+    border: 1px solid #f8ecec;
+    box-shadow: 1px 1px 5px #000;
+    z-index: 5;
+}
+
+.right-section{
+    flex: 1;
+}
+
+.right-section-text{
+    font-size: 25px;
+    color:#808080;
+    padding: 20px;
+}
+
+.right-section-body{
+    height: 95vh;
+    border-left:1px solid #808080;
+    padding: 50px 15px;
+}
+
+.display-none{
+    display: none;
+}
+
+.visibility-hidden{
+    visibility: hidden;
+}
+
+.popup-header-form{
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 45px;
+    border-bottom: 1px solid #808080;
+}
+
+.popup-header-right-form button,
+.popup-right-form-btn button{
+    height: 24px;
+    border: none;
+    color: #1C80A3;
+    background-color: #ddd;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.popup-header-right-form button:hover,
+.popup-right-form-btn button:hover {
+    color: #fff;
+    background-color: #1C80A3;
+}
+
+.popup-right-form-btn button{
+    color: #fff;
+    background-color: #1C80A3;
+    margin: 15px;
+}
+
+.popup-header-right-form>button{
+    background-color: #fff;
+    border: none;
+}
+
+.popup-body-form {
+    padding-top: 20px;
+    padding-left: 15px;
+    font-size: 15px;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.input-form{
+    height: 30px;
+    width: 85%;
+}
+
+.popup-body-form>div{
+    margin: 20px 0px;
+}
+
+.close-form{
+    background-color: #fff;
+    border: none;
+}
+
+.close-search{
+    background-color: #ebedf0;
+}
+
+.main-image{
+    padding: 250px 80px;
+    background-color: #ebedf0;
+    width: 20vw;
+}
+
+.main-image>img{
+    height: 100px;
+    border-radius: 30%;
+}
+
+.error-display{
+    padding: 200px 75px;
+    color: red;
+}
+
+.search-btn,
+.sync-btn{
+    background-color: #ebedf0;
+}
+
+.search-bar{
+    width: 100%;
+}
+
+.log-in{
+    position: absolute;
+    right: -300px;
+    top: 0px;
+    z-index: 1;
+}
+
+.header-outline{
+    padding-top: 13px;
+}
+
+.or-word{
+    margin: 0px 80px;
+}
+
+.text-first-line{
+    margin: 0px 25px
+}
+
+.last-line-text{
+    padding: 0px 10px;
+}
+
+.users-not-found{
+    background-color: #ebedf0;
+    padding: 10px;
+}
+.menu{
+    width: 180px;
+}
+/* ----------- Responsiveness -------------- */
+
+body{
+    flex-wrap: wrap;
+    overflow-x: hidden;
+}
+
+/* ----------- */
+
+@media screen and (min-width:320px) and (max-width:600px) {
+    .menu a{
+        display: none;
+    }
+    .menu{
+        width: 12vw;
+    }
+
+    .container{
+        flex-wrap: nowrap;
+    }
+
+    .users-details {
+        flex: 2;
+        min-width:300px;
+    }
+
+    .right-popup {
+        min-width: 375px;
+        position: absolute;
+        right: 0;
+        height: 100vh;
+        background-color: #fff;
+    }
+
+    .form-popup{
+        min-width: 375px;
+        position: absolute;
+        right: 0;
+        height: 100vh;
+    }
+
+    .right-section{
+        /* min-width: 400px; */
+        display: none;
+    }
+
+    .log-in{
+        right: 0px;
+    }
+}
+
+@media screen and (min-width:601px) and (max-width:1023px) {
+    .right-popup {
+        position: absolute;
+        right: 0;
+        height: 100vh;
+        background-color: #fff;
+    }
+
+    .form-popup{
+        position: absolute;
+        right: 0;
+        height: 100vh;
+    }
+
+    .right-section{
+        display: none;
+    }
+
+    .users-details {
+        flex: 1;
+        min-width: 200px;
+    }
+
+    .main {
+        min-width: 350px;
+    }
+
+    .menu a{
+        display: none;
+    }
+
+    .menu{
+        flex: 0.1;
+    }
+
+    .log-in{
+        right: 0px;
+    }
+}

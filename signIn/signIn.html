@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="signIn page for inventory application">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="signIn.css">
+  <title> Sign In</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="wrapper">
+      <div class="title">
+        <h1>Login</h1>
+      </div>
+      <form action="#" method="POST">
+        <div class="row">
+          <i class="fas fa-user"></i>
+          <label for="username" aria-label="Username" value="username" required>
+            <input type="text" id="username" placeholder="Username" required></label>
+        </div>
+        <div class="row">
+          <i class="fas fa-lock"></i>
+          <label for="password" value="password" aria-label="Password">
+            <input type="password" id="password" placeholder="Password" required></label>
+        </div>
+        <p id='error' class="error"></p>
+        <div class="row button">
+          <input type="submit" value="Login" id="validateUser">
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="signIn.js" type="module"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+
+</body>
+
+</html>

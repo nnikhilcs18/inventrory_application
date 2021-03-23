@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="inventory dashboard">
+    <meta name="keywords" content="dashboard device-list all-units">
+    <title>Inventory Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="../utils/global.css">
+    <link rel="stylesheet" href="inventoryDashboard.css">
+    <script src="inventoryDashboard.js" type="module"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"
+        integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <header class="header-outline"></header>
+
+        <div class="container">
+
+            <nav class="menu"></nav>
+
+            <section class="main">
+                <div class="content-border">
+                    <div class="content-header">
+                        <div class="content-header-left">
+                            <div class="allText">All Units</div>
+                        </div>
+                        <div class="content-header-right ">
+                            <div class="content-header-icons">
+                                <button aria-label="search" class="search-button"><i
+                                        class='fas fa-search '></i></button>
+                                <button aria-label="refresh" class="refresh-button"><i
+                                        class="fas fa-sync-alt "></i></button>
+                                <button aria-label="add" class="add-button"><i class="fas fa-plus "></i></button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="content-header">
+                        <button class="back-button hide" aria-label="Back Button"><i
+                                class="fas fa-arrow-left"></i></button>
+                        <label for="searchBar" class="hide">Search</label>
+                        <input type="search" placeholder="Type in search by type,name.." class=" search-bar hide"
+                            id="searchBar" aria-label="Search Bar">
+                    </div>
+                </div>
+                <div class="row-structure row-header">
+                    <div class="mobile-hidden"> </div>
+                    <div> Status </div>
+                    <div class="mobile-hidden"> Serial </div>
+                    <div> Type </div>
+                    <div class="mobile-hidden"> Name </div>
+                    <div> Assigned to </div>
+                    <div class="mobile-hidden"> From </div>
+                </div>
+                <img src="../assets/load.gif" class="load-gif" alt="loading..">
+                <div class="main-content">
+
+                </div>
+
+            </section>
+        </div>
+    </div>
+    <section class="right-popup">
+        <div class="popup-body">
+            <form method="POST" action="FormHandler.php" class="add-form">
+                <div class="popup-header">
+                    <div class="popup-header-left">
+                        <button aria-label="Close Icon" class="close-button"><i class="fas fa-times"></i></button>
+                        <span>Add a new unit</span>
+                    </div>
+                    <div class="popup-header-right">
+                        <button aria-label="Cancel" class="cancel-button popup-btn">Cancel</button>
+                    </div>
+                </div>
+                <div class="successfull-creation hide">
+                    <span class="success-msg"></span>
+                    <button aria-label="Close Icon" class="close-msg"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="device-list">
+                    <label for="txtDevices" aria-label="deviceslist">
+                        <select class="form-add-device-list add-device-list device-dropdown" id="txtDevices">
+                            <option>--Select--</option>
+                        </select>
+                    </label>
+                    <label for="txtQuantity">Quantity</label><input id="txtQuantity" class="quantity" type="number"
+                        value="1" min="0">
+                </div>
+                <div class="form-add-device">
+                    <div class="form-elements">
+                        <label for="txtModel" class="required name">Name</label>
+                        <input id="txtModel" type="text" class="form-device-name" />
+                    </div>
+                    <div class="form-elements">
+                        <label for="txtSerial" class="required serial">Serial</label>
+                        <input id="txtSerial" type="text" class="form-device-serial" />
+                    </div>
+                    <div class="form-elements">
+                        <label for="txtStatus">Status</label>
+                        <input id="txtStatus" type="text" class="form-device-status" />
+                    </div>
+                    <div class="form-elements">
+                        <label for="txtAssigned" aria-label="assigned">Assigned To
+                            <select class="form-add-assigned add-device-list device-list assigned-to-list"
+                                id="txtAssigned">
+                                <option>--Select--</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="form-elements">
+                        <label for="txtFrom">From</label>
+                        <input id="txtFrom" type="date" class="form-device-from" />
+                    </div>
+
+                </div>
+                <button aria-label="Save" class="save-button popup-btn">Save</button>
+
+            </form>
+        </div>
+    </section>
+
+</body>
+
+</html>
